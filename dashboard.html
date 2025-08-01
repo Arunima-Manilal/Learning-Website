@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(-45deg, #1a3b57, #2a6f85, #3b97a8, #8bc7b5);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #a3c1d1;
+        }
+
+        p {
+            font-size: 24px;
+            max-width: 800px;
+            margin: 30px auto;
+            line-height: 1.7;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideFadeIn 2s ease-out forwards;
+        }
+
+        @keyframes slideFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .start-button {
+            background-color: #4f9f6e;
+            border: none;
+            padding: 16px 40px;
+            font-size: 20px;
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 40px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .start-button:hover {
+            background-color: #3e7c59;
+            transform: scale(1.05);
+        }
+
+        /* Logo styles */
+        .logo {
+            font-size: 20px; /* Set font size for the logo */
+            font-weight: 600; /* Make the text bold */
+            color: #a3c1d1; /* Soft peacock blue */
+            margin-bottom: 40px;
+            animation: floatLogo 5s ease-in-out infinite; /* Animation for floating effect */
+        }
+
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px); /* Float upwards */
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- FeatherLearn Text Logo -->
+    <div class="logo">FeatherLearn</div>
+
+    <h1>Welcome Learner!</h1>
+    <p>
+        Welcome to your personal learning dashboard — a smart platform designed to support your journey into the world of web development and programming. This website serves as a centralized hub for learners , access learning materials, and improve your skills in HTML, CSS, Python, and more.
+        
+        The goal of this platform is to make learning easier, more organized, and fun. Whether you're just starting out or brushing up on your knowledge, the website guides you through carefully structured lessons and hands-on activities. You can monitor your completed lessons,and continue learning at your own pace.
+        </p>
+       <p>This dashboard is designed with simplicity and effectiveness in mind. With a clean interface and smooth navigation, it ensures that learners stay focused and motivated. The "Start Learning" button takes you directly into your lessons, allowing for quick access to your coursework and content.
+        </p>
+      <p>  In the future, this platform will expand to include quizzes, certifications, personalized recommendations, and even AI-powered learning suggestions. It’s more than just a dashboard — it’s your companion in becoming a confident web developer.
+        
+        --- Stay motivated, and elevate your coding skills with a fun and user-friendly interface
+    </p>
+    <button class="start-button" onclick="location.href='lessons.html'">Start Learning</button>
+    </body>
+</html>

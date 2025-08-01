@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 3: HTML Tables</title>
+  <style>
+    body {
+      background-color: #306998;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    table {
+      background-color: #00000033;
+      color: white;
+      padding: 10px;
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid white;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="html-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 3: HTML Tables</h1>
+
+  <h2>What are HTML Tables?</h2>
+  <p>HTML tables allow web developers to arrange data into rows and columns.</p>
+
+  <h2>Example Table</h2>
+  <table>
+    <tr><th>Company</th><th>Contact</th><th>Country</th></tr>
+    <tr><td>Alfreds Futterkiste</td><td>Maria Anders</td><td>Germany</td></tr>
+    <tr><td>Centro comercial Moctezuma</td><td>Francisco Chang</td><td>Mexico</td></tr>
+    <tr><td>Ernst Handel</td><td>Roland Mendel</td><td>Austria</td></tr>
+    <tr><td>Island Trading</td><td>Helen Bennett</td><td>UK</td></tr>
+    <tr><td>Laughing Bacchus Winecellars</td><td>Yoshi Tannamuri</td><td>Canada</td></tr>
+    <tr><td>Magazzini Alimentari Riuniti</td><td>Giovanni Rovelli</td><td>Italy</td></tr>
+  </table>
+
+  <h2>Define an HTML Table</h2>
+  <p>A table in HTML consists of table cells inside rows and columns.</p>
+
+  <h3>Basic Structure</h3>
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Company&lt;/th&gt;
+    &lt;th&gt;Contact&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alfreds Futterkiste&lt;/td&gt;
+    &lt;td&gt;Maria Anders&lt;/td&gt;
+    &lt;td&gt;Germany&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+  <h2>Table Cells</h2>
+  <p>Each table cell is defined by a <code>&lt;td&gt;</code> tag. It stands for "table data".</p>
+
+  <h3>Example</h3>
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emil&lt;/td&gt;
+    &lt;td&gt;Tobias&lt;/td&gt;
+    &lt;td&gt;Linus&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+  <table>
+    <tr><td>Emil</td><td>Tobias</td><td>Linus</td></tr>
+  </table>
+
+  <h2>Table Rows</h2>
+  <p>Each table row starts with a <code>&lt;tr&gt;</code> and ends with a <code>&lt;/tr&gt;</code> tag.</p>
+
+  <h3>Example</h3>
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emil&lt;/td&gt;
+    &lt;td&gt;Tobias&lt;/td&gt;
+    &lt;td&gt;Linus&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;16&lt;/td&gt;
+    &lt;td&gt;14&lt;/td&gt;
+    &lt;td&gt;10&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+  <table>
+    <tr><td>Emil</td><td>Tobias</td><td>Linus</td></tr>
+    <tr><td>16</td><td>14</td><td>10</td></tr>
+  </table>
+
+  <h2>Table Headers</h2>
+  <p>Use <code>&lt;th&gt;</code> for table headers instead of <code>&lt;td&gt;</code>.</p>
+
+  <h3>Example</h3>
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Person 1&lt;/th&gt;
+    &lt;th&gt;Person 2&lt;/th&gt;
+    &lt;th&gt;Person 3&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emil&lt;/td&gt;
+    &lt;td&gt;Tobias&lt;/td&gt;
+    &lt;td&gt;Linus&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+  <table>
+    <tr><th>Person 1</th><th>Person 2</th><th>Person 3</th></tr>
+    <tr><td>Emil</td><td>Tobias</td><td>Linus</td></tr>
+    <tr><td>16</td><td>14</td><td>10</td></tr>
+  </table>
+
+  <button onclick="markLessonComplete('lesson3')">Mark as Complete</button>
+  <div class="completed">✔ Lesson completed!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("lesson3") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

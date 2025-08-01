@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 1: Learn HTML</title>
+  <style>
+    body {
+      background-color: #1fa3c7;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: rgb(0, 170, 255);
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="html-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 1: Learn HTML</h1>
+
+  <h2>HTML Introduction</h2>
+  <p>HTML is the standard markup language for creating web pages.</p>
+
+  <h2>What is HTML?</h2>
+  <ul>
+    <li>HTML stands for <strong>Hyper Text Markup Language</strong></li>
+    <li>Describes the structure of a web page</li>
+    <li>Consists of a series of elements</li>
+    <li>Elements tell the browser how to display content</li>
+    <li>Elements label content like headings, paragraphs, and links</li>
+  </ul>
+
+  <h2>A Simple HTML Document</h2>
+  <h3>Example</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;My First Heading&lt;/h1&gt;
+  &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>Example Explained</h3>
+  <ul>
+    <li><code>&lt;!DOCTYPE html&gt;</code>: Defines this as an HTML5 document</li>
+    <li><code>&lt;html&gt;</code>: Root of the HTML page</li>
+    <li><code>&lt;head&gt;</code>: Contains metadata</li>
+    <li><code>&lt;title&gt;</code>: Title shown on browser tab</li>
+    <li><code>&lt;body&gt;</code>: Visible content</li>
+    <li><code>&lt;h1&gt;</code>: Main heading</li>
+    <li><code>&lt;p&gt;</code>: Paragraph</li>
+  </ul>
+
+  <h2>What is an HTML Element?</h2>
+  <p>Defined by a start tag, some content, and an end tag:</p>
+  <pre><code>&lt;tagname&gt;Content here&lt;/tagname&gt;</code></pre>
+  <p>Example:</p>
+  <pre><code>&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;</code></pre>
+
+  <h2>HTML Basic Examples</h2>
+  <h3>HTML Documents</h3>
+  <p>Must start with <code>&lt;!DOCTYPE html&gt;</code>, followed by <code>&lt;html&gt;</code> to <code>&lt;/html&gt;</code>. The visible part is between <code>&lt;body&gt;</code> tags.</p>
+
+  <h3>Example</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h2>HTML Headings</h2>
+  <p>Use <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings:</p>
+  <pre><code>&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;h3&gt;This is heading 3&lt;/h3&gt;</code></pre>
+
+  <h2>HTML Paragraphs</h2>
+  <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
+
+  <h2>HTML Links</h2>
+  <pre><code>&lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</code></pre>
+
+  <h2>HTML Images</h2>
+  <pre><code>&lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;</code></pre>
+
+  <h2>Viewing HTML Source</h2>
+  <ul>
+    <li>Press <strong>CTRL + U</strong> to view source code</li>
+    <li>Right-click > Inspect to explore HTML/CSS</li>
+  </ul>
+
+  <h2>Exercise</h2>
+  <p><strong>What is a correct HTML markup for the document type declaration?</strong></p>
+  <ul>
+    <li><code>&lt;!DOCTYPE html&gt;</code> </li>
+    <li><code>DOCTYPE html;</code></li>
+    <li><code>--DOCTYPE html;</code></li>
+  </ul>
+
+  <button onclick="markLessonComplete('lesson-html-1')">Mark as Complete</button>
+  
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      alert("Lesson marked as complete!");
+    }
+  </script>
+
+</body>
+</html>

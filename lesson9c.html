@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 8: C Variables</title>
+  <style>
+    body {
+      background-color: #2c3e50;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #34495e;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="c-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 8: C Variables</h1>
+
+  <p>Variables are containers for storing data values like numbers or characters.</p>
+
+  <h2>Types of Variables</h2>
+  <ul>
+    <li><code>int</code> - stores whole numbers like 123 or -123</li>
+    <li><code>float</code> - stores numbers with decimals like 19.99</li>
+    <li><code>char</code> - stores single characters like <code>'a'</code> or <code>'B'</code></li>
+  </ul>
+
+  <h2>Declaring Variables</h2>
+  <p>To create a variable, use the format:</p>
+  <pre><code>type variableName = value;</code></pre>
+  <p>Example:</p>
+  <pre><code>int myNum = 15;</code></pre>
+
+  <h3>Declare First, Assign Later</h3>
+  <pre><code>// Declare
+int myNum;
+
+// Assign
+myNum = 15;</code></pre>
+
+  <h2>Output Variables</h2>
+  <p>Using <code>printf()</code> for text works like this:</p>
+  <pre><code>printf("Hello World!");</code></pre>
+
+  <p>But printing a variable directly like this won't work:</p>
+  <pre><code>int myNum = 15;
+printf(myNum); // ❌ This won't work!</code></pre>
+
+  <p>To print variables, you need something called <strong>format specifiers</strong> — which we’ll explore in the next lesson.</p>
+
+  <button onclick="markLessonComplete('c-lesson8')">Mark as Complete</button>
+  <div class="completed">Lesson marked as complete!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("c-lesson8") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

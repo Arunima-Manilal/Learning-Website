@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 5: HTML Links</title>
+  <style>
+    body {
+      background-color: #18b3b6;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="html-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 5: HTML Links</h1>
+
+  <h2>What Are HTML Links?</h2>
+  <p>Links allow users to navigate to other web pages or external websites. They are created using the <code>&lt;a&gt;</code> tag.</p>
+
+  <h2>The &lt;a&gt; Tag</h2>
+  <p>The <code>&lt;a&gt;</code> tag (anchor tag) is used to create hyperlinks. The destination URL is set in the <code>href</code> attribute.</p>
+  <pre><code>&lt;a href="https://www.w3schools.com"&gt;Visit W3Schools&lt;/a&gt;</code></pre>
+
+  <h2>Opening Links in a New Tab</h2>
+  <p>Use <code>target="_blank"</code> to open the link in a new browser tab:</p>
+  <pre><code>&lt;a href="https://www.google.com" target="_blank"&gt;Open Google in a new tab&lt;/a&gt;</code></pre>
+
+  <h2>Linking to Pages in Your Website</h2>
+  <p>You can also link to another page in your own website:</p>
+  <pre><code>&lt;a href="about.html"&gt;Go to About Page&lt;/a&gt;</code></pre>
+
+  <h2>Link Attributes</h2>
+  <ul>
+    <li><code>href</code> - Specifies the destination address</li>
+    <li><code>target</code> - Defines where to open the link</li>
+    <li><code>title</code> - Tooltip text on hover</li>
+  </ul>
+
+  <h2>Styled Links</h2>
+  <p>You can style links using the <code>style</code> attribute or CSS:</p>
+  <pre><code>&lt;a href="#" style="color:yellow;"&gt;Yellow Link&lt;/a&gt;</code></pre>
+
+  <h2>Quiz Question</h2>
+  <p><strong>Which attribute specifies the URL of the page the link goes to?</strong></p>
+  <ul>
+    <li><code>src</code></li>
+    <li><code>href</code> ✅</li>
+    <li><code>link</code></li>
+    <li><code>target</code></li>
+  </ul>
+
+  <h2>Tag Reference</h2>
+  <ul>
+    <li><code>&lt;a&gt;</code> - Defines a hyperlink</li>
+  </ul>
+
+  <button onclick="markLessonComplete('lesson-html-5')">Mark as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      alert("Lesson marked as complete!");
+    }
+  </script>
+
+</body>
+</html>

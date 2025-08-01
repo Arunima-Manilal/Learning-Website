@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 3: Python Comments</title>
+  <style>
+    body {
+      background-color: #2b5d3c;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #354f3d;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="python-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 3: Python Comments</h1>
+
+  <p>Comments can be used to explain Python code.</p>
+  <p>Comments can be used to make the code more readable.</p>
+  <p>Comments can be used to prevent execution when testing code.</p>
+
+  <h2>Creating a Comment</h2>
+  <p>Comments start with a <code>#</code>, and Python will ignore them:</p>
+
+  <h3>Example</h3>
+  <pre><code># This is a comment
+print("Hello, World!")</code></pre>
+
+  <p>Comments can be placed at the end of a line, and Python will ignore the rest of the line:</p>
+
+  <h3>Example</h3>
+  <pre><code>print("Hello, World!")  # This is a comment</code></pre>
+
+  <p>A comment does not have to be text that explains the code, it can also be used to prevent Python from executing code:</p>
+
+  <h3>Example</h3>
+  <pre><code># print("Hello, World!")
+print("Cheers, Mate!")</code></pre>
+
+  <h2>Multiline Comments</h2>
+  <p>Python does not really have a syntax for multiline comments.</p>
+  <p>To add a multiline comment, you could insert a <code>#</code> for each line:</p>
+
+  <h3>Example</h3>
+  <pre><code># This is a comment
+# written in
+# more than just one line
+print("Hello, World!")</code></pre>
+
+  <button onclick="completeLesson(this)">Mark Lesson as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function completeLesson(btn) {
+      btn.style.display = "none";
+      btn.nextElementSibling.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

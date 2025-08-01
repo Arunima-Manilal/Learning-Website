@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 6: C New Lines</title>
+  <style>
+    body {
+      background-color: #2c3e50;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #34495e;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #1f2d3a;
+    }
+    td {
+      background-color: #34495e;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="c-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 6: C New Lines</h1>
+
+  <h2>Using <code>\n</code> for New Lines</h2>
+  <p>To insert a new line in C, use the newline character <code>\n</code> inside a <code>printf()</code> function.</p>
+
+  <h3>Example:</h3>
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello World!\n");
+  printf("I am learning C.");
+  return 0;
+}</code></pre>
+
+  <h2>Multiple New Lines in One <code>printf()</code></h2>
+  <p>You can also use multiple <code>\n</code> characters in a single statement. However, that can reduce readability if overused.</p>
+
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello World!\nI am learning C.\nAnd it is awesome!");
+  return 0;
+}</code></pre>
+
+  <h2>Blank Lines</h2>
+  <p>If you use two <code>\n</code> characters in a row, it creates a blank line:</p>
+
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello World!\n\n");
+  printf("I am learning C.");
+  return 0;
+}</code></pre>
+
+  <h2>What is <code>\n</code>?</h2>
+  <p>The <code>\n</code> is called an <strong>escape sequence</strong>. It forces the cursor to move to the next line on the screen.</p>
+
+  <h2>Other Escape Sequences</h2>
+  <table>
+    <tr>
+      <th>Escape Sequence</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>\t</code></td>
+      <td>Creates a horizontal tab</td>
+    </tr>
+    <tr>
+      <td><code>\\</code></td>
+      <td>Inserts a backslash character (<code>\</code>)</td>
+    </tr>
+    <tr>
+      <td><code>\"</code></td>
+      <td>Inserts a double quote character</td>
+    </tr>
+  </table>
+
+  <button onclick="markLessonComplete('c-lesson6')">Mark as Complete</button>
+  <div class="completed">Lesson marked as complete!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("c-lesson6") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

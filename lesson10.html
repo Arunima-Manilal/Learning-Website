@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 4: HTML Class Attribute</title>
+  <style>
+    body {
+      background-color: #306998;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="html-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 4: HTML <code>class</code> Attribute</h1>
+
+  <h2>What is the <code>class</code> Attribute?</h2>
+  <p>The HTML <code>class</code> attribute is used to specify a class for an HTML element. Multiple elements can share the same class.</p>
+
+  <h2>Using Classes with CSS</h2>
+  <p>The <code>class</code> attribute can link to a style defined in a stylesheet.</p>
+
+  <pre><code>&lt;style&gt;
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+&lt;/style&gt;
+
+&lt;div class="city"&gt;
+  &lt;h2&gt;London&lt;/h2&gt;
+  &lt;p&gt;London is the capital of England.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+  <h2>More Examples</h2>
+
+  <pre><code>&lt;span class="note"&gt;Important&lt;/span&gt;
+
+&lt;style&gt;
+.note {
+  font-size: 120%;
+  color: red;
+}
+&lt;/style&gt;
+</code></pre>
+
+  <p>This will style both span elements the same way.</p>
+
+  <h2>Syntax for Class</h2>
+  <p>To create a class in CSS, use a period (<code>.</code>) followed by the class name:</p>
+
+  <pre><code>.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}</code></pre>
+
+  <p>Apply it to elements like:</p>
+
+  <pre><code>&lt;h2 class="city"&gt;London&lt;/h2&gt;</code></pre>
+
+  <h2>Multiple Classes</h2>
+  <p>You can assign more than one class to an element, separated by spaces:</p>
+
+  <pre><code>&lt;h2 class="city main"&gt;London&lt;/h2&gt;</code></pre>
+
+  <h2>Different Elements Sharing the Same Class</h2>
+  <p>Different elements can share a class:</p>
+
+  <pre><code>&lt;h2 class="city"&gt;Paris&lt;/h2&gt;
+&lt;p class="city"&gt;Paris is the capital of France&lt;/p&gt;</code></pre>
+
+  <h2>JavaScript and Class</h2>
+  <p>JavaScript can select elements by class name using <code>getElementsByClassName()</code>:</p>
+
+  <pre><code>&lt;script&gt;
+function myFunction() {
+  var x = document.getElementsByClassName("city");
+  for (var i = 0; i &lt; x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+&lt;/script&gt;
+</code></pre>
+
+  <p><strong>Note:</strong> You’ll learn more about JavaScript in a later chapter!</p>
+
+  <h2>Chapter Summary</h2>
+  <ul>
+    <li>The <code>class</code> attribute defines one or more class names.</li>
+    <li>CSS and JavaScript can both use classes to select and style elements.</li>
+    <li>Multiple elements can share the same class name.</li>
+    <li>Class names are case sensitive.</li>
+  </ul>
+
+  <button onclick="markLessonComplete('lesson4')">Mark as Complete</button>
+  <div class="completed">✔ Lesson completed!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("lesson4") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

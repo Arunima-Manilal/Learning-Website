@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 2: HTML Text Formatting</title>
+  <style>
+    body {
+      background-color: #306998;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="html-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 2: HTML Text Formatting</h1>
+
+  <h2>Introduction</h2>
+  <p>HTML provides several elements to define text with special meaning or styling.</p>
+
+  <h2>Formatting Examples</h2>
+  <ul>
+    <li><b>This text is bold</b></li>
+    <li><i>This text is italic</i></li>
+    <li>This is <sub>subscript</sub> and <sup>superscript</sup></li>
+  </ul>
+
+  <h2>Common Formatting Tags</h2>
+  <ul>
+    <li><code>&lt;b&gt;</code> - Bold text</li>
+    <li><code>&lt;strong&gt;</code> - Important text</li>
+    <li><code>&lt;i&gt;</code> - Italic text</li>
+    <li><code>&lt;em&gt;</code> - Emphasized text</li>
+    <li><code>&lt;mark&gt;</code> - Marked/highlighted text</li>
+    <li><code>&lt;small&gt;</code> - Smaller text</li>
+    <li><code>&lt;del&gt;</code> - Deleted text</li>
+    <li><code>&lt;ins&gt;</code> - Inserted text</li>
+    <li><code>&lt;sub&gt;</code> - Subscript text</li>
+    <li><code>&lt;sup&gt;</code> - Superscript text</li>
+  </ul>
+
+  <h2>Examples in Action</h2>
+
+  <h3>Bold and Strong</h3>
+  <pre><code>&lt;b&gt;This text is bold&lt;/b&gt;</code></pre>
+  <p><b>This text is bold</b></p>
+
+  <pre><code>&lt;strong&gt;This text is important!&lt;/strong&gt;</code></pre>
+  <p><strong>This text is important!</strong></p>
+
+  <h3>Italic and Emphasis</h3>
+  <pre><code>&lt;i&gt;This text is italic&lt;/i&gt;</code></pre>
+  <p><i>This text is italic</i></p>
+
+  <pre><code>&lt;em&gt;This text is emphasized&lt;/em&gt;</code></pre>
+  <p><em>This text is emphasized</em></p>
+
+  <h3>Small and Marked Text</h3>
+  <pre><code>&lt;small&gt;This is some smaller text.&lt;/small&gt;</code></pre>
+  <p><small>This is some smaller text.</small></p>
+
+  <pre><code>&lt;p&gt;Do not forget to buy &lt;mark&gt;milk&lt;/mark&gt; today.&lt;/p&gt;</code></pre>
+  <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+  <h3>Deleted and Inserted Text</h3>
+  <pre><code>&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; red.&lt;/p&gt;</code></pre>
+  <p>My favorite color is <del>blue</del> red.</p>
+
+  <pre><code>&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;.&lt;/p&gt;</code></pre>
+  <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+
+  <h3>Subscript and Superscript</h3>
+  <pre><code>H&lt;sub&gt;2&lt;/sub&gt;O and E = mc&lt;sup&gt;2&lt;/sup&gt;</code></pre>
+  <p>H<sub>2</sub>O and E = mc<sup>2</sup></p>
+
+  <button onclick="markLessonComplete('lesson2')">Mark as Complete</button>
+  <div class="completed">✔ Lesson completed!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("lesson2") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

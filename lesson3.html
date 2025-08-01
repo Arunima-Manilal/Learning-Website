@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 2: HTML Attributes</title>
+  <style>
+    body {
+      background-color: #125619;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="html-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 2: HTML Attributes</h1>
+
+  <h2>What are HTML Attributes?</h2>
+  <ul>
+    <li>Provide additional information about elements</li>
+    <li>Always appear in the start tag</li>
+    <li>Usually written as <code>name="value"</code></li>
+  </ul>
+
+  <h2>The <code>href</code> Attribute</h2>
+  <p>Used in anchor tags to define link destination:</p>
+  <pre><code>&lt;a href="https://www.w3schools.com"&gt;Visit W3Schools&lt;/a&gt;</code></pre>
+
+  <h2>The <code>src</code> Attribute</h2>
+  <p>Specifies image location in the <code>&lt;img&gt;</code> tag:</p>
+  <pre><code>&lt;img src="img_girl.jpg"&gt;</code></pre>
+
+  <p><strong>Two ways to use <code>src</code>:</strong></p>
+  <ul>
+    <li><strong>Absolute URL:</strong> <code>src="https://www.example.com/image.jpg"</code></li>
+    <li><strong>Relative URL:</strong> <code>src="img/image.jpg"</code></li>
+  </ul>
+
+  <h2>Width and Height Attributes</h2>
+  <p>Used to control image size:</p>
+  <pre><code>&lt;img src="img_girl.jpg" width="500" height="600"&gt;</code></pre>
+
+  <h2>The <code>alt</code> Attribute</h2>
+  <p>Specifies alternate text for images:</p>
+  <pre><code>&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;</code></pre>
+  <p>Example with a missing image:</p>
+  <pre><code>&lt;img src="img_typo.jpg" alt="Girl with a jacket"&gt;</code></pre>
+
+  <h2>The <code>style</code> Attribute</h2>
+  <p>Adds inline styles to elements:</p>
+  <pre><code>&lt;p style="color:red;"&gt;This is a red paragraph.&lt;/p&gt;</code></pre>
+
+  <h2>The <code>lang</code> Attribute</h2>
+  <p>Used in the <code>&lt;html&gt;</code> tag to specify page language:</p>
+  <pre><code>&lt;html lang="en"&gt;</code></pre>
+  <p>Can include country code:</p>
+  <pre><code>&lt;html lang="en-US"&gt;</code></pre>
+
+  <h2>The <code>title</code> Attribute</h2>
+  <p>Displays a tooltip when hovering over an element:</p>
+  <pre><code>&lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+
+  <h2>Best Practices</h2>
+  <ul>
+    <li><strong>Use lowercase</strong> for attribute names</li>
+    <li><strong>Quote</strong> attribute values</li>
+    <li>Use double quotes by default</li>
+    <li>Use single quotes if value contains double quotes</li>
+  </ul>
+
+  <h3>Examples</h3>
+  <pre><code>&lt;a href="https://www.w3schools.com/html/"&gt;Visit our HTML tutorial&lt;/a&gt;</code></pre>
+  <pre><code>&lt;p title='John "ShotGun" Nelson'&gt;Nickname example&lt;/p&gt;</code></pre>
+
+  <h2>Chapter Summary</h2>
+  <ul>
+    <li>All elements can have attributes</li>
+    <li><code>href</code> for links</li>
+    <li><code>src</code>, <code>width</code>, <code>height</code>, <code>alt</code> for images</li>
+    <li><code>style</code> for inline styling</li>
+    <li><code>lang</code> for language</li>
+    <li><code>title</code> for tooltips</li>
+  </ul>
+
+  <button onclick="markLessonComplete('lesson-html-2')">Mark as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      alert("Lesson marked as complete!");
+    }
+  </script>
+
+</body>
+</html>

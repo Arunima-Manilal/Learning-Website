@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 4: Python Variables</title>
+  <style>
+    body {
+      background-color: #5a3b84;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #382656;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4d2f7d;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="python-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 4: Python Variables</h1>
+
+  <h2>Variables</h2>
+  <p>Variables are containers for storing data values.</p>
+
+  <h2>Creating Variables</h2>
+  <p>Python has no command for declaring a variable.</p>
+  <p>A variable is created the moment you first assign a value to it.</p>
+
+  <h3>Example</h3>
+  <pre><code>x = 5
+y = "John"
+print(x)
+print(y)</code></pre>
+
+  <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+
+  <h3>Example</h3>
+  <pre><code>x = 4       # x is of type int
+x = "Sally" # x is now of type str
+print(x)</code></pre>
+
+  <h2>Casting</h2>
+  <p>If you want to specify the data type of a variable, this can be done with casting.</p>
+
+  <h3>Example</h3>
+  <pre><code>x = str(3)    # x will be '3'
+y = int(3)    # y will be 3
+z = float(3)  # z will be 3.0</code></pre>
+
+  <h2>Get the Type</h2>
+  <p>You can get the data type of a variable with the <code>type()</code> function.</p>
+
+  <h3>Example</h3>
+  <pre><code>x = 5
+y = "John"
+print(type(x))
+print(type(y))</code></pre>
+
+  <p>You will learn more about data types and casting later in this tutorial.</p>
+
+  <h2>Single or Double Quotes?</h2>
+  <p>String variables can be declared either by using single or double quotes:</p>
+
+  <h3>Example</h3>
+  <pre><code>x = "John"
+# is the same as
+x = 'John'</code></pre>
+
+  <h2>Case-Sensitive</h2>
+  <p>Variable names are case-sensitive.</p>
+
+  <button onclick="completeLesson(this)">Mark Lesson as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function completeLesson(btn) {
+      btn.style.display = "none";
+      btn.nextElementSibling.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

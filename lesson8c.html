@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 7: C Comments</title>
+  <style>
+    body {
+      background-color: #2c3e50;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #34495e;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="c-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 7: C Comments</h1>
+
+  <h2>Why Use Comments?</h2>
+  <p>Comments are used to explain code, improve readability, or prevent code from executing. They can be single-line or multi-line comments.</p>
+
+  <h2>Single-line Comments</h2>
+  <p>Start single-line comments with two slashes <code>//</code>. Everything after <code>//</code> on the same line will be ignored by the compiler.</p>
+
+  <h3>Example (Before a Line):</h3>
+  <pre><code>// This is a comment
+printf("Hello World!");</code></pre>
+
+  <h3>Example (End of a Line):</h3>
+  <pre><code>printf("Hello World!"); // This is a comment</code></pre>
+
+  <h2>Multi-line Comments</h2>
+  <p>Start with <code>/*</code> and end with <code>*/</code>. Everything between is ignored by the compiler.</p>
+
+  <h3>Example:</h3>
+  <pre><code>/* The code below will print
+Hello World! to the screen */
+printf("Hello World!");</code></pre>
+
+  <h2>Which Type Should You Use?</h2>
+  <p>Use <code>//</code> for short explanations and <code>/* */</code> for longer comments or when commenting out blocks of code.</p>
+
+  <p><strong>Note:</strong> Before C99 (released in 1999), only multi-line comments were allowed in C.</p>
+
+  <button onclick="markLessonComplete('c-lesson7')">Mark as Complete</button>
+  <div class="completed">Lesson marked as complete!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("c-lesson7") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

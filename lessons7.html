@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 6: HTML Images</title>
+  <style>
+    body {
+      background-color: #094548;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: rgb(57, 97, 144);
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="html-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 6: HTML Images</h1>
+
+  <h2>The &lt;img&gt; Tag</h2>
+  <p>HTML images are defined with the <code>&lt;img&gt;</code> tag. This tag is empty, meaning it contains attributes only and does not have a closing tag.</p>
+
+  <h2>Basic Image Example</h2>
+  <pre><code>&lt;img src="img_girl.jpg" alt="Girl in a jacket"&gt;</code></pre>
+
+  <h2>Image Attributes</h2>
+  <ul>
+    <li><code>src</code> - The path to the image</li>
+    <li><code>alt</code> - Alternate text if the image can’t be displayed</li>
+    <li><code>width</code> and <code>height</code> - Image size in pixels</li>
+  </ul>
+  <pre><code>&lt;img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"&gt;</code></pre>
+
+  <h2>Absolute vs. Relative URLs</h2>
+  <ul>
+    <li><strong>Absolute URL</strong> - Includes the full web address:</li>
+    <pre><code>&lt;img src="https://example.com/image.jpg"&gt;</code></pre>
+    <li><strong>Relative URL</strong> - Refers to a file within your website:</li>
+    <pre><code>&lt;img src="images/image.jpg"&gt;</code></pre>
+  </ul>
+
+  <h2>The alt Attribute</h2>
+  <p>Use <code>alt</code> to describe the image if it can't load or for screen readers:</p>
+  <pre><code>&lt;img src="img_typo.jpg" alt="Girl with a jacket"&gt;</code></pre>
+
+  <h2>Quiz Question</h2>
+  <p><strong>What does the <code>alt</code> attribute do?</strong></p>
+  <ul>
+    <li>Changes the image size</li>
+    <li>Specifies the image path</li>
+    <li>🔘 Provides alternate text for the image ✅</li>
+    <li>Changes the image alignment</li>
+  </ul>
+
+  <h2>Tag Reference</h2>
+  <ul>
+    <li><code>&lt;img&gt;</code> - Embeds an image</li>
+  </ul>
+
+  <button onclick="markLessonComplete('lesson-html-6')">Mark as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      alert("Lesson marked as complete!");
+    }
+  </script>
+
+</body>
+</html>

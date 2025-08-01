@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Lesson 1:  CSS syntax</title>
+        <style>
+    body {
+        background-color: #105651;
+        font-family: Arial, sans-serif;
+        color: white;
+        padding: 20px;
+      }
+
+      .back {
+        background-color: #00000099;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+  
+      .completed {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: lime;
+      }
+  
+      button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        background-color: #3a1e00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: #522b00;
+      }
+    </style>
+</head>
+<body>
+    <a href="css-lesson.html" class="back">← Back to All Lessons</a>
+
+
+  <h1>CSS Backgrounds</h1>
+
+  <p>The CSS background properties are used to add background effects for elements. You'll learn:</p>
+  <ul>
+    <li>background-color</li>
+    <li>background-image</li>
+    <li>background-repeat</li>
+    <li>background-attachment</li>
+    <li>background-position</li>
+    <li>background (shorthand)</li>
+  </ul>
+
+  <div class="section">
+    <h2>background-color</h2>
+    <p>This property sets the background color of an element.</p>
+
+    <pre>
+body {
+  background-color: lightblue;
+}
+    </pre>
+
+    <p>Color values can be set using:</p>
+    <ul>
+      <li>Color name – <code>red</code></li>
+      <li>HEX – <code>#ff0000</code></li>
+      <li>RGB – <code>rgb(255, 0, 0)</code></li>
+    </ul>
+
+    <div class="demo-box" style="background-color: green;">
+      h1 background: green
+    </div>
+
+    <div class="demo-box" style="background-color: lightblue; color: black;">
+      div background: lightblue
+    </div>
+
+    <div class="demo-box" style="background-color: yellow; color: black;">
+      p background: yellow
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Opacity / Transparency</h2>
+    <p>The <code>opacity</code> property sets how transparent an element is (0.0 to 1.0):</p>
+
+    <pre>
+div {
+  background-color: green;
+  opacity: 0.3;
+}
+    </pre>
+
+    <div class="opacity-box" style="opacity: 1;">opacity: 1 (fully opaque)</div>
+    <div class="opacity-box" style="opacity: 0.6;">opacity: 0.6</div>
+    <div class="opacity-box" style="opacity: 0.3;">opacity: 0.3</div>
+    <div class="opacity-box" style="opacity: 0.1;">opacity: 0.1</div>
+
+    <p><strong>Note:</strong> Child elements will also become transparent when using the <code>opacity</code> property.</p>
+  </div>
+
+  <div class="section">
+    <h2>Transparency using RGBA</h2>
+    <p>To apply transparency to the background only (not the text), use <code>rgba()</code> instead of <code>opacity</code>:</p>
+
+    <pre>
+div {
+  background: rgba(0, 128, 0, 0.3);
+}
+    </pre>
+
+    <div class="rgba-box" style="background: rgba(0, 128, 0, 1.0);">100% opacity</div>
+    <div class="rgba-box" style="background: rgba(0, 128, 0, 0.6);">60% opacity</div>
+    <div class="rgba-box" style="background: rgba(0, 128, 0, 0.3);">30% opacity</div>
+    <div class="rgba-box" style="background: rgba(0, 128, 0, 0.1);">10% opacity</div>
+
+    <p>RGBA adds an alpha channel to RGB for transparency. Format: <code>rgba(red, green, blue, alpha)</code>.</p>
+  </div>
+
+</body>
+</html>

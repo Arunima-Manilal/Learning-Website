@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 1: Learn Python</title>
+  <style>
+    body {
+      background-color: #306998;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="python-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 1: Learn Python</h1>
+
+  <h2>Python Introduction</h2>
+  <p>Python is a popular programming language.</p>
+  <p>Python can be used on a server to create web applications.</p>
+
+  <h2>Learning by Examples</h2>
+  <p>With our "Try it Yourself" editor, you can edit Python code and view the result.</p>
+
+  <h3>Example</h3>
+  <pre><code>print("Hello, World!")</code></pre>
+  <p>Click on the "Try it Yourself" button to see how it works.</p>
+
+  <h2>Python File Handling</h2>
+  <p>In our File Handling section you will learn how to open, read, write, and delete files.</p>
+
+  <h2>Python Database Handling</h2>
+  <p>In our database section you will learn how to access and work with MySQL and MongoDB databases:</p>
+  <ul>
+    <li><a href="#" style="color: lightblue;">Python MySQL Tutorial</a></li>
+    <li><a href="#" style="color: lightblue;">Python MongoDB Tutorial</a></li>
+  </ul>
+
+  <h2>Python Exercises</h2>
+  <p>Many chapters in this tutorial end with an exercise where you can check your level of knowledge.</p>
+
+  <h3>Exercise</h3>
+  <p><strong>What is a correct way to declare a Python variable?</strong></p>
+  <ul>
+    <li><code>var x = 5</code></li>
+    <li><code>#x = 5</code></li>
+    <li><code>$x = 5</code></li>
+    <li><code>x = 5</code> ✅</li>
+  </ul>
+
+  <h2>Python Examples</h2>
+  <p>Learn by examples! This tutorial supplements all explanations with clarifying examples.</p>
+
+  <h2>What is Python?</h2>
+  <p>Python is a popular programming language. It was created by Guido van Rossum and released in 1991.</p>
+  <p>It is used for:</p>
+  <ul>
+    <li>Web development (server-side)</li>
+    <li>Software development</li>
+    <li>Mathematics</li>
+    <li>System scripting</li>
+  </ul>
+
+  <h2>What can Python do?</h2>
+  <ul>
+    <li>Create web applications on a server</li>
+    <li>Workflows in software</li>
+    <li>Connect to and modify databases</li>
+    <li>Handle big data and perform complex math</li>
+    <li>Rapid prototyping and production software</li>
+  </ul>
+
+  <h2>Why Python?</h2>
+  <ul>
+    <li>Cross-platform (Windows, Mac, Linux, Raspberry Pi)</li>
+    <li>Simple English-like syntax</li>
+    <li>Fewer lines of code needed</li>
+    <li>Interpreter-based execution</li>
+    <li>Supports procedural, object-oriented, and functional programming</li>
+  </ul>
+
+  <h2>Good to Know</h2>
+  <p>The most recent major version of Python is Python 3. We'll use it in this tutorial.</p>
+  <p>Python can be written in a text editor or an IDE like Thonny, PyCharm, NetBeans, or Eclipse.</p>
+
+  <h2>Python Syntax vs Other Languages</h2>
+  <ul>
+    <li>Designed for readability, influenced by math and English</li>
+    <li>Uses new lines to end commands (not semicolons)</li>
+    <li>Uses indentation (not curly braces) to define scope</li>
+  </ul>
+
+  <h3>Example</h3>
+  <pre><code>print("Hello, World!")</code></pre>
+
+  
+  <!-- lesson3python.html -->
+<button onclick="markLessonComplete('lesson3')">Mark as Complete</button>
+<p class="completed">Completed this lesson</p>
+
+<script>
+  function markLessonComplete(lessonId) {
+    localStorage.setItem(lessonId, "completed");
+    alert("Lesson marked as complete!");
+  }
+  </script>
+  
+
+</body>
+</html>

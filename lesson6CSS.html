@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Lesson 1:  CSS syntax</title>
+        <style>
+    body {
+        background-color: #0a7245;
+        font-family: Arial, sans-serif;
+        color: white;
+        padding: 20px;
+      }
+
+      .back {
+        background-color: #00000099;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+  
+      .completed {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: lime;
+      }
+  
+      button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        background-color: #3a1e00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: #522b00;
+      }
+    </style>
+</head>
+<body>
+    <a href="css-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>CSS Colors</h1>
+
+  <p>Colors in CSS can be specified using predefined color names or various color value formats like <strong>RGB</strong>, <strong>HEX</strong>, <strong>HSL</strong>, <strong>RGBA</strong>, and <strong>HSLA</strong>.</p>
+
+  <h2>CSS Color Names</h2>
+  <p>CSS supports 140 standard color names such as:</p>
+  <ul>
+    <li>Tomato</li>
+    <li>Orange</li>
+    <li>DodgerBlue</li>
+    <li>MediumSeaGreen</li>
+    <li>Gray</li>
+    <li>SlateBlue</li>
+    <li>Violet</li>
+    <li>LightGray</li>
+  </ul>
+
+  <h2>CSS Background Color</h2>
+  <div class="color-demo">
+    <h1 style="background-color:DodgerBlue; color:white;">Hello World</h1>
+    <p style="background-color:Tomato; color:white;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh...</p>
+  </div>
+
+  <h2>CSS Text Color</h2>
+  <div class="color-demo">
+    <h1 style="color:Tomato;">Hello World</h1>
+    <p style="color:DodgerBlue;">Lorem ipsum dolor sit amet...</p>
+    <p style="color:MediumSeaGreen;">Ut wisi enim ad minim veniam...</p>
+  </div>
+
+  <h2>CSS Border Color</h2>
+  <div class="color-demo">
+    <h1 style="border:2px solid Tomato;">Hello World</h1>
+    <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+    <h1 style="border:2px solid Violet;">Hello World</h1>
+  </div>
+
+  <h2>CSS Color Values</h2>
+  <p>Besides color names, you can use other value types to define colors:</p>
+
+  <ul>
+    <li><strong>RGB:</strong> <code>rgb(255, 99, 71)</code></li>
+    <li><strong>HEX:</strong> <code>#ff6347</code></li>
+    <li><strong>HSL:</strong> <code>hsl(9, 100%, 64%)</code></li>
+    <li><strong>RGBA (with transparency):</strong> <code>rgba(255, 99, 71, 0.5)</code></li>
+    <li><strong>HSLA (with transparency):</strong> <code>hsla(9, 100%, 64%, 0.5)</code></li>
+  </ul>
+
+  <div class="color-demo">
+    <h1 style="background-color:rgb(255, 99, 71); color:white;">RGB Color</h1>
+    <h1 style="background-color:#ff6347; color:white;">HEX Color</h1>
+    <h1 style="background-color:hsl(9, 100%, 64%); color:white;">HSL Color</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 0.5);">RGBA Color (50% transparent)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">HSLA Color (50% transparent)</h1>
+  </div>
+
+  <div class="highlight">
+    <p>You will learn more about RGB, HEX, and HSL in the next chapters!</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 3: C Syntax</title>
+  <style>
+    body {
+      background-color: #2c3e50;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #34495e;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="c-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 3: C Syntax</h1>
+
+  <h2>Understanding Basic Syntax</h2>
+  <p>Let's break down the most basic C program line by line:</p>
+
+  <h3>Example:</h3>
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello World!");
+  return 0;
+}</code></pre>
+
+  <h2>Explanation:</h2>
+  <ul>
+    <li><strong>Line 1:</strong> <code>#include &lt;stdio.h&gt;</code> includes the Standard Input Output library, which lets us use functions like <code>printf()</code>.</li>
+    <li><strong>Line 2:</strong> A blank line. C ignores whitespace, but it helps improve readability.</li>
+    <li><strong>Line 3:</strong> <code>int main()</code> is the main function from where execution starts. The code inside <code>{ }</code> gets executed.</li>
+    <li><strong>Line 4:</strong> <code>printf("Hello World!");</code> prints the text "Hello World!" to the screen.</li>
+    <li><strong>Note:</strong> Every C statement ends with a <code>;</code> (semicolon).</li>
+    <li><strong>Line 5:</strong> <code>return 0;</code> ends the <code>main()</code> function and returns 0 to signal successful execution.</li>
+    <li><strong>Line 6:</strong> The closing curly bracket <code>}</code> marks the end of the <code>main()</code> function.</li>
+  </ul>
+
+  <h3>Compact Version:</h3>
+  <pre><code>int main(){printf("Hello World!");return 0;}</code></pre>
+  <p>This version does the same thing, but isn't as readable. Good formatting makes code easier to maintain!</p>
+
+  <button onclick="markLessonComplete('c-lesson3')">Mark as Complete</button>
+  <div class="completed">Lesson marked as complete!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("c-lesson3") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

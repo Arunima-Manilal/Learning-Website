@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Lesson 1:  CSS syntax</title>
+        <style>
+    body {
+        background-color: #08614c;
+        font-family: Arial, sans-serif;
+        color: white;
+        padding: 20px;
+      }
+
+      .back {
+        background-color: #00000099;
+        color: rgb(0, 0, 0);
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+  
+      .completed {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: lime;
+      }
+  
+      button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        background-color: #3a1e00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: #522b00;
+      }
+    </style>
+</head>
+<body>
+    <a href="css-lesson.html" class="back">← Back to All Lessons</a>
+
+<body>
+
+  <h1>CSS Comments</h1>
+
+  <p>CSS comments are used to explain your code and make it easier to read and maintain. They are not displayed in the browser.</p>
+
+  <div class="highlight">
+    <p>CSS comments start with <code>/*</code> and end with <code>*/</code>. Browsers ignore comments.</p>
+  </div>
+
+  <h2>Single-line Comment</h2>
+  <pre><code>/* This is a single-line comment */
+p {
+  color: red;
+}</code></pre>
+
+  <h2>Comment Within a Declaration</h2>
+  <pre><code>p {
+  color: red;  /* Set text color to red */
+}</code></pre>
+
+  <h2>Comment in the Middle of a Line</h2>
+  <pre><code>p {
+  color: /*red*/blue;
+}</code></pre>
+
+  <h2>Multi-line Comment</h2>
+  <pre><code>/* This is
+a multi-line
+comment */
+
+p {
+  color: red;
+}</code></pre>
+
+  <h2>Combining HTML and CSS Comments</h2>
+  <p>You can also add comments in HTML using <code>&lt;!-- ... --&gt;</code>.</p>
+
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  color: red; /* Set text color to red */
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;My Heading&lt;/h2&gt;
+
+&lt;!-- These paragraphs will be red --&gt;
+&lt;p&gt;Hello World!&lt;/p&gt;
+&lt;p&gt;This paragraph is styled with CSS.&lt;/p&gt;
+&lt;p&gt;HTML and CSS comments are not shown in the output.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</body>
+</html>

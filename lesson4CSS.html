@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Lesson 1:  CSS selectors</title>
+        <style>
+    body {
+        background-color: #0c5340;
+        font-family: Arial, sans-serif;
+        color: white;
+        padding: 20px;
+      }
+
+      .back {
+        background-color: #00000099;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+  
+      .completed {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: lime;
+      }
+  
+      button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        background-color: #3a1e00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: #522b00;
+      }
+    </style>
+</head>
+<body>
+    <a href="css-lesson.html" class="back">← Back to All Lessons</a>
+
+<body>
+
+  <h1>CSS Selectors</h1>
+
+  <p>CSS selectors are used to <strong>"find"</strong> or select the HTML elements you want to style.</p>
+
+  <div class="highlight">
+    <p>We can divide CSS selectors into five categories:</p>
+    <ul>
+      <li>Simple selectors (select by name, id, class)</li>
+      <li>Combinator selectors (based on relationships)</li>
+      <li>Pseudo-class selectors (based on state)</li>
+      <li>Pseudo-element selectors (part of an element)</li>
+      <li>Attribute selectors (based on attribute values)</li>
+    </ul>
+  </div>
+
+  <h2>The Element Selector</h2>
+  <p>Selects elements by their name.</p>
+  <pre><code>p {
+  text-align: center;
+  color: red;
+}</code></pre>
+
+  <h2>The ID Selector</h2>
+  <p>Uses the <code>id</code> attribute to select a unique element.</p>
+  <pre><code>#para1 {
+  text-align: center;
+  color: red;
+}</code></pre>
+  <p><strong>Note:</strong> ID names cannot start with a number!</p>
+
+  <h2>The Class Selector</h2>
+  <p>Uses the <code>class</code> attribute to select elements.</p>
+  <pre><code>.center {
+  text-align: center;
+  color: red;
+}</code></pre>
+
+  <p>To target a specific element type with a class:</p>
+  <pre><code>p.center {
+  text-align: center;
+  color: red;
+}</code></pre>
+
+  <p>You can apply multiple classes to an element:</p>
+  <pre><code>&lt;p class="center large"&gt;This paragraph refers to two classes.&lt;/p&gt;</code></pre>
+
+  <h2>The Universal Selector</h2>
+  <p>Selects <strong>all elements</strong> on the page.</p>
+  <pre><code>* {
+  text-align: center;
+  color: blue;
+}</code></pre>
+
+  <h2>The Grouping Selector</h2>
+  <p>Groups multiple selectors with the same styles.</p>
+  <pre><code>h1, h2, p {
+  text-align: center;
+  color: red;
+}</code></pre>
+
+  <h2>Exercise</h2>
+  <p><strong>Which CSS selector is used to select an element with a specific id?</strong></p>
+  <ul>
+    <li>*</li>
+    <li>.</li>
+    <li><strong>#</strong></li>
+    <li>%</li>
+  </ul>
+
+  <h2>All CSS Simple Selectors</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Selector</th>
+        <th>Example</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#id</td>
+        <td>#firstname</td>
+        <td>Selects the element with id="firstname"</td>
+      </tr>
+      <tr>
+        <td>.class</td>
+        <td>.intro</td>
+        <td>Selects all elements with class="intro"</td>
+      </tr>
+      <tr>
+        <td>*</td>
+        <td>*</td>
+        <td>Selects all elements</td>
+      </tr>
+      <tr>
+        <td>element</td>
+        <td>p</td>
+        <td>Selects all &lt;p&gt; elements</td>
+      </tr>
+      <tr>
+        <td>element, element</td>
+        <td>div, p</td>
+        <td>Selects all &lt;div&gt; and all &lt;p&gt; elements</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

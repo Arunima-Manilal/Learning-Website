@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 5: C Output (Print Text)</title>
+  <style>
+    body {
+      background-color: #2c3e50;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #34495e;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="c-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 5: C Output (Print Text)</h1>
+
+  <h2>Printing Text with <code>printf()</code></h2>
+  <p>To output values or print text in C, you can use the <code>printf()</code> function.</p>
+
+  <h3>Example:</h3>
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello World!");
+  return 0;
+}</code></pre>
+
+  <h2>Double Quotes</h2>
+  <p>When working with text, it must be wrapped in double quotes <code>""</code>.</p>
+
+  <h3>Correct:</h3>
+  <pre><code>printf("This sentence will work!");</code></pre>
+
+  <h3>Incorrect:</h3>
+  <pre><code>printf(This sentence will produce an error.);</code></pre>
+
+  <p>If you forget the quotes, you’ll get a compilation error!</p>
+
+  <h2>Using Multiple <code>printf()</code> Statements</h2>
+  <p>You can use as many <code>printf()</code> functions as needed. But note: it doesn't automatically add a new line between outputs.</p>
+
+  <h3>Example:</h3>
+  <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello World!");
+  printf("I am learning C.");
+  printf("And it is awesome!");
+  return 0;
+}</code></pre>
+
+  <p>This code will output: <br>
+    <code>Hello World!I am learning C.And it is awesome!</code>
+  </p>
+
+  <p>We'll learn how to add line breaks using <code>\n</code> in the next lesson!</p>
+
+  <button onclick="markLessonComplete('c-lesson5')">Mark as Complete</button>
+  <div class="completed">Lesson marked as complete!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("c-lesson5") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

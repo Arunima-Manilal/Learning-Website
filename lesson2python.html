@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 2: Python Syntax</title>
+  <style>
+    body {
+      background-color: #306998;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="python-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 2: Python Syntax</h1>
+
+  <h2>Execute Python Syntax</h2>
+  <p>As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:</p>
+  <pre><code>>>> print("Hello, World!")  
+Hello, World!</code></pre>
+
+  <p>Or by creating a Python file on the server, using the <code>.py</code> file extension, and running it in the Command Line:</p>
+  <pre><code>C:\Users\Your Name&gt;python myfile.py</code></pre>
+
+  <h2>Python Indentation</h2>
+  <p>Indentation refers to the spaces at the beginning of a code line.</p>
+  <p>Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.</p>
+  <p>Python uses indentation to indicate a block of code.</p>
+
+  <h3>Example</h3>
+  <pre><code>if 5 &gt; 2:
+  print("Five is greater than two!")</code></pre>
+
+  <p><strong>Python will give you an error if you skip the indentation:</strong></p>
+  <h3>Syntax Error Example</h3>
+  <pre><code>if 5 &gt; 2:
+print("Five is greater than two!")</code></pre>
+
+  <p>The number of spaces is up to you as a programmer. The most common is four, but it has to be at least one.</p>
+
+  <h3>Examples</h3>
+  <pre><code>if 5 &gt; 2:
+ print("Five is greater than two!") 
+
+if 5 &gt; 2:
+        print("Five is greater than two!")</code></pre>
+
+  <p><strong>You must use the same number of spaces in the same block of code, otherwise Python will give you an error:</strong></p>
+
+  <h3>Syntax Error Example</h3>
+  <pre><code>if 5 &gt; 2:
+ print("Five is greater than two!")
+        print("Five is greater than two!")</code></pre>
+
+  <h2>Python Variables</h2>
+  <p>In Python, variables are created when you assign a value to them:</p>
+
+  <h3>Example</h3>
+  <pre><code>x = 5
+y = "Hello, World!"</code></pre>
+
+  <p>Python has no command for declaring a variable.</p>
+  <p>You will learn more about variables in the Python Variables chapter.</p>
+
+  <h2>Python Comments</h2>
+  <p>Python has commenting capability for the purpose of in-code documentation.</p>
+  <p>Comments start with a <code>#</code>, and Python will ignore the rest of the line.</p>
+
+  <h3>Example</h3>
+  <pre><code># This is a comment
+print("Hello, World!")</code></pre>
+
+  <button onclick="completeLesson(this)">Mark Lesson as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function completeLesson(btn) {
+      btn.style.display = "none";
+      btn.nextElementSibling.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

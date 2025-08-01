@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 10: Python Strings</title>
+  <style>
+    body {
+      background-color: #5a3b84;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #382656;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4d2f7d;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="python-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 10: Python Strings</h1>
+
+  <h2>Strings</h2>
+  <p>Strings in Python are surrounded by either single quotation marks, or double quotation marks.</p>
+  <p><code>'hello'</code> is the same as <code>"hello"</code>.</p>
+  <p>You can display a string literal with the <code>print()</code> function:</p>
+  
+  <h3>Example</h3>
+  <pre><code>print("Hello")
+print('Hello')</code></pre>
+
+  <h2>Quotes Inside Quotes</h2>
+  <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+  
+  <h3>Example</h3>
+  <pre><code>print("It's alright")
+print("He is called 'Johnny'")
+print('He is called "Johnny"')</code></pre>
+
+  <h2>Assign String to a Variable</h2>
+  <p>Assigning a string to a variable is done with the variable name followed by an equal sign and the string:</p>
+  
+  <h3>Example</h3>
+  <pre><code>a = "Hello"
+print(a)</code></pre>
+
+  <h2>Multiline Strings</h2>
+  <p>You can assign a multiline string to a variable by using three quotes:</p>
+  
+  <h3>Example</h3>
+  <pre><code>a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)</code></pre>
+  
+  <p>Or three single quotes:</p>
+  
+  <h3>Example</h3>
+  <pre><code>a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)</code></pre>
+
+  <h2>Strings are Arrays</h2>
+  <p>Strings in Python are arrays of bytes representing Unicode characters. However, Python does not have a character data type, so a single character is simply a string with a length of 1.</p>
+  <p>Square brackets can be used to access elements of the string:</p>
+  
+  <h3>Example</h3>
+  <pre><code>a = "Hello, World!"
+print(a[1])</code></pre>
+
+  <h2>Looping Through a String</h2>
+  <p>Since strings are arrays, we can loop through the characters in a string with a <code>for</code> loop.</p>
+  
+  <h3>Example</h3>
+  <pre><code>for x in "banana":
+  print(x)</code></pre>
+
+  <h2>String Length</h2>
+  <p>To get the length of a string, use the <code>len()</code> function:</p>
+  
+  <h3>Example</h3>
+  <pre><code>a = "Hello, World!"
+print(len(a))</code></pre>
+
+  <h2>Check String</h2>
+  <p>To check if a certain phrase or character is present in a string, we can use the keyword <code>in</code>.</p>
+  
+  <h3>Example</h3>
+  <pre><code>txt = "The best things in life are free!"
+print("free" in txt)</code></pre>
+
+  <p>Use it in an <code>if</code> statement:</p>
+  
+  <h3>Example</h3>
+  <pre><code>txt = "The best things in life are free!"
+if "free" in txt:
+  print("Yes, 'free' is present.")</code></pre>
+
+  <button onclick="completeLesson(this)">Mark Lesson as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function completeLesson(btn) {
+      btn.style.display = "none";
+      btn.nextElementSibling.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

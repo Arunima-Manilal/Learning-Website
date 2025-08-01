@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Lesson 1:  CSS syntax</title>
+        <style>
+    body {
+        background-color: #063a35;
+        font-family: Arial, sans-serif;
+        color: white;
+        padding: 20px;
+      }
+
+      .back {
+        background-color: #00000099;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+  
+      .completed {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: lime;
+      }
+  
+      button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        background-color: #3a1e00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: #522b00;
+      }
+    </style>
+</head>
+<body>
+    <a href="css-lesson.html" class="back">← Back to All Lessons</a>
+
+
+  <h1>CSS Height, Width and Max-width</h1>
+
+  <p>The <code>height</code> and <code>width</code> properties are used to define the height and width of an element.</p>
+  <p>The <code>max-width</code> property sets the maximum width an element can take.</p>
+
+  <div class="section">
+    <h2>Setting Height and Width</h2>
+    <p>These properties set the content area of an element (excluding padding, border, and margin).</p>
+
+    <pre>div {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}</pre>
+
+    <div class="box box1">
+      height: 200px, width: 50%
+    </div>
+
+    <pre>div {
+  height: 100px;
+  width: 500px;
+  background-color: powderblue;
+}</pre>
+
+    <div class="box box2">
+      height: 100px, width: 500px
+    </div>
+
+    <div class="note">
+      <strong>Note:</strong> Height and width apply only to the content box. Padding, borders, and margins are extra!
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Setting Max-width</h2>
+    <p>Using <code>max-width</code> allows the element to scale down on smaller screens without overflowing.</p>
+
+    <pre>div {
+  max-width: 500px;
+  height: 100px;
+  background-color: powderblue;
+}</pre>
+
+    <div class="box box3">
+      height: 100px, max-width: 500px
+    </div>
+
+    <div class="note">
+      <strong>Tip:</strong> Try resizing the browser window. The max-width box will shrink, while a fixed width box may overflow and create scrollbars.
+    </div>
+  </div>
+
+</body>
+</html>

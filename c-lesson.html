@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS LESSONS</title>
+  <style>
+   body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(-45deg, #26a69a, #009688, #1f635c, #8e24aa); /* Lighter teal (#26a69a) */
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      padding: 20px;
+      color: #f5f5f5;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+
+    h1 {
+      font-size: 36px;
+      color: #33ccff;
+    }
+
+    .dashboard-btn {
+      background-color: #00000099;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .lesson {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .lesson a {
+      color: #00f0ff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .lesson a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="lessons.html" class="dashboard-btn">← Back to Dashboard</a>
+
+  <h1>C Programming</h1>
+  <p>Select a lesson to learn more:</p>
+
+  <div class="lesson"><a href="lesson1c.html">Lesson 1: Programming in C</a></div>
+  <div class="lesson"><a href="lesson2C.html">Lesson 2: Introduction to C </a></div>
+  <div class="lesson"><a href="lesson3C.html">Lesson 3:C syntax</a></div>
+  <!-- Add more as needed -->
+  <div class="lesson"><a href="lesson4C.html">Lesson 4: C statements</a></div>
+  <div class="lesson"><a href="lesson5C.html">Lesson 5: C output</a></div>
+  <div class="lesson"><a href="lesson6C.html">Lesson 6:C output print text</a></div>
+  <div class="lesson"><a href="lesson7C.html">Lesson 7: new line </a></div>
+  <div class="lesson"><a href="lesson8C.html">Lesson 8: C comments</a></div>
+  <div class="lesson"><a href="lesson9C.html">Lesson 9:Variables</a></div>
+  <div class="lesson"><a href="lesson10C.html">Lesson 10:C format specifiers</a></div>
+</html>

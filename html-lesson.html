@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Lessons</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(-45deg, #1a3b57, #2a6f85, #3b97a8, #8bc7b5);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ffcc66;
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .dashboard-btn {
+      background-color: #4f9f6e;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .dashboard-btn:hover {
+      background-color: #3e7c59;
+      transform: scale(1.05);
+    }
+
+    .lesson {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .lesson:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+      transform: scale(1.05);
+    }
+
+    .lesson a {
+      color: #00f0ff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .lesson a:hover {
+      text-decoration: underline;
+      color: #ffcc66;
+    }
+
+    .progress-container {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 8px;
+      margin: 20px 0;
+      height: 30px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: #4f9f6e;
+      width: 0%;
+      border-radius: 8px;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="lessons.html" class="dashboard-btn">← Back to Dashboard</a>
+  <h1>HTML Lessons</h1>
+  <p>Select a lesson to learn more:</p>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="lesson" id="lesson1"><a href="lesson1.html">Lesson 1: Introduction to HTML</a></div>
+  <div class="lesson" id="lesson2"><a href="lesson2.html">Lesson 2: HTML Brief</a></div>
+  <div class="lesson" id="lesson3"><a href="lesson3.html">Lesson 3: HTML Attributes</a></div>
+  <div class="lesson" id="lesson4"><a href="lesson4.html">Lesson 4: HTML Headings</a></div>
+  <div class="lesson" id="lesson5"><a href="lessons5.html">Lesson 5: HTML Paragraphs</a></div>
+  <div class="lesson" id="lesson6"><a href="lesson6.html">Lesson 6: HTML Links</a></div>
+  <div class="lesson" id="lesson7"><a href="lessons7.html">Lesson 7: HTML Images</a></div>
+  <div class="lesson" id="lesson8"><a href="lesson8.html">Lesson 8: HTML Formatting</a></div>
+  <div class="lesson" id="lesson9"><a href="lesson9.html">Lesson 9: HTML Tables</a></div>
+  <div class="lesson" id="lesson10"><a href="lesson10.html">Lesson 10: HTML classes</a></div>
+
+  <script>
+    const totalLessons = 10;
+    let completed = 0;
+
+    for (let i = 1; i <= totalLessons; i++) {
+      if (localStorage.getItem(lesson${i}) === "completed") {
+        completed++;
+        const lessonDiv = document.getElementById(lesson${i});
+        
+        }
+      }
+    }
+
+    const percent = (completed / totalLessons) * 100;
+    document.getElementById("progressBar").style.width = percent + "%";
+  </script>
+
+</body>
+</html>

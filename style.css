@@ -1,0 +1,207 @@
+/* Base Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #04364a, #379683, #5cdb95, #8ee4af);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Animation */
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fade In Effects */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Header & Text */
+header {
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #9df9ef; /* Light mint */
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #d1f2eb;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+/* Buttons */
+.start-btn,
+button,
+.logout-btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #206a5d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+.start-btn:hover,
+button:hover,
+.logout-btn:hover {
+  background-color: #329d9c;
+  transform: scale(1.05);
+}
+
+/* Form Container */
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #e6fffa;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #04364a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  margin-top: 15px;
+  color: #04364a;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #80cbc4;
+  font-size: 1rem;
+}
+
+a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard Styles */
+#username-display {
+  font-weight: bold;
+  color: #04364a;
+}
+
+.progress-container {
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.progress-bar {
+  margin-bottom: 25px;
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #05445e;
+}
+
+.progress {
+  background-color: #e0f2f1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 30px;
+  background: linear-gradient(to right, #00adb5, #379683, #5cdb95);
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.logout-btn {
+  margin: 40px auto;
+  display: block;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.logo-text {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #00adb5, #379683, #5cdb95);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textPulse 4s ease-in-out infinite;
+  letter-spacing: 2px;
+}
+.logout-button {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+/* Text glow animation */
+@keyframes textPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px #5cdb95);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #00adb5);
+  }
+}

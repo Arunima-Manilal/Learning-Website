@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 9: Python Casting</title>
+  <style>
+    body {
+      background-color: #5a3b84;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #382656;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4d2f7d;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="python-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 9: Python Casting</h1>
+
+  <h2>Specify a Variable Type</h2>
+  <p>There may be times when you want to specify a type on to a variable. This can be done with casting. Python is an object-oriented language, and as such, it uses classes to define data types, including its primitive types.</p>
+  <p>Casting in Python is therefore done using constructor functions:</p>
+  <ul>
+    <li><code>int()</code> - constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)</li>
+    <li><code>float()</code> - constructs a float number from an integer literal, a float literal, or a string literal (providing the string represents a float or an integer)</li>
+    <li><code>str()</code> - constructs a string from a wide variety of data types, including strings, integer literals, and float literals</li>
+  </ul>
+
+  <h3>Example: Integers</h3>
+  <pre><code>x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3</code></pre>
+
+  <h3>Example: Floats</h3>
+  <pre><code>x = float(1)     # x will be 1.0
+y = float(2.8)   # y will be 2.8
+z = float("3")   # z will be 3.0
+w = float("4.2") # w will be 4.2</code></pre>
+
+  <button onclick="completeLesson(this)">Mark Lesson as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function completeLesson(btn) {
+      btn.style.display = "none";
+      btn.nextElementSibling.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Lesson 1:  CSS syntax</title>
+        <style>
+    body {
+        background-color: #0a5839;
+        font-family: Arial, sans-serif;
+        color: white;
+        padding: 20px;
+      }
+
+      .back {
+        background-color: #00000099;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+  
+      .completed {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: lime;
+      }
+  
+      button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        background-color: #3a1e00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: #522b00;
+      }
+    </style>
+</head>
+<body>
+    <a href="css-lesson.html" class="back">← Back to All Lessons</a>
+
+<body>
+
+  <h1>CSS Syntax</h1>
+
+  <div class="highlight">
+    <p><strong>A CSS rule consists of a selector and a declaration block.</strong></p>
+  </div>
+
+  <h2>CSS Selector</h2>
+  <p>The selector points to the HTML element you want to style.</p>
+
+  <h2>Declaration Block</h2>
+  <p>The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS <strong>property name</strong> and a <strong>value</strong>, separated by a colon.</p>
+
+  <p>Declaration blocks are surrounded by <strong>curly braces</strong> <code>{ }</code>.</p>
+
+  <p>Multiple declarations are separated by <strong>semicolons</strong> <code>;</code>.</p>
+
+  <h2>Example</h2>
+  <p>This example will style all <code>&lt;p&gt;</code> elements to have red text and be center-aligned:</p>
+
+  <pre><code>p {
+  color: red;
+  text-align: center;
+}</code></pre>
+
+</body>
+</html>

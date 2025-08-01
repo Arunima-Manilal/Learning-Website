@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 4: C Statements</title>
+  <style>
+    body {
+      background-color: #2c3e50;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #34495e;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="c-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 4: C Statements</h1>
+
+  <h2>What Are Statements?</h2>
+  <p>A computer program is a list of instructions to be executed by a computer. In C, these instructions are called <strong>statements</strong>.</p>
+
+  <p>The following is a simple statement that tells the computer to print something on the screen:</p>
+
+  <h3>Example:</h3>
+  <pre><code>printf("Hello World!");</code></pre>
+
+  <p><strong>Important:</strong> Always end a statement with a semicolon <code>;</code>. If you forget it, your program will throw an error:</p>
+
+  <h3>Example (missing semicolon):</h3>
+  <pre><code>printf("Hello World!")
+error: expected ';' before 'return'</code></pre>
+
+  <h2>Multiple Statements</h2>
+  <p>Most C programs contain many statements. These are executed one by one in the order they appear:</p>
+
+  <h3>Example:</h3>
+  <pre><code>printf("Hello World!");
+printf("Have a good day!");
+return 0;</code></pre>
+
+  <h2>Example Explained</h2>
+  <ul>
+    <li><code>printf("Hello World!");</code> → prints "Hello World!"</li>
+    <li><code>printf("Have a good day!");</code> → prints "Have a good day!"</li>
+    <li><code>return 0;</code> → ends the program successfully</li>
+  </ul>
+
+  <p>For now, just remember: <strong>every C statement must end with a semicolon</strong> to avoid errors.</p>
+
+  <p>Coming up next: You'll learn how to format the output and insert new lines for better readability.</p>
+
+  <button onclick="markLessonComplete('c-lesson4')">Mark as Complete</button>
+  <div class="completed">Lesson marked as complete!</div>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      document.querySelector(".completed").style.display = "block";
+      alert("Lesson marked as complete!");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("c-lesson4") === "completed") {
+        document.querySelector(".completed").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

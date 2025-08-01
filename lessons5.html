@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 4: HTML Paragraphs</title>
+  <style>
+    body {
+      background-color: #427f85;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #1e2a36;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d3f51;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="html-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 4: HTML Paragraphs</h1>
+
+  <h2>What Are HTML Paragraphs?</h2>
+  <p>Paragraphs are blocks of text that are separated from other blocks. They help break content into readable chunks.</p>
+
+  <h2>The &lt;p&gt; Tag</h2>
+  <p>HTML paragraphs are defined using the <code>&lt;p&gt;</code> tag:</p>
+  <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
+
+  <h2>Paragraph Formatting</h2>
+  <ul>
+    <li>Browsers automatically add a blank line (margin) before and after each paragraph</li>
+    <li>Use multiple <code>&lt;p&gt;</code> tags instead of line breaks for proper formatting</li>
+  </ul>
+
+  <h2>Don't Use Multiple &lt;br&gt; Tags</h2>
+  <p>While you can use <code>&lt;br&gt;</code> to break lines, don't use it excessively to create spacing between paragraphs. Use proper tags like <code>&lt;p&gt;</code> for better structure.</p>
+  <pre><code>&lt;p&gt;This is correct.&lt;/p&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;!-- Not recommended for spacing! --&gt;</code></pre>
+
+  <h2>Using the style Attribute</h2>
+  <p>You can use the <code>style</code> attribute to change how a paragraph looks. For example, make text red:</p>
+  <pre><code>&lt;p style="color:red;"&gt;This is a red paragraph.&lt;/p&gt;</code></pre>
+
+  <h2>Quiz Question</h2>
+  <p><strong>Which HTML tag is used to define a paragraph?</strong></p>
+  <ul>
+    <li><code>&lt;h1&gt;</code></li>
+    <li><code>&lt;p&gt;</code> </li>
+    <li><code>&lt;div&gt;</code></li>
+    <li><code>&lt;br&gt;</code></li>
+  </ul>
+
+  <h2>Tag Reference</h2>
+  <ul>
+    <li><code>&lt;p&gt;</code> - Defines a paragraph</li>
+    <li><code>&lt;br&gt;</code> - Inserts a line break</li>
+  </ul>
+
+  <button onclick="markLessonComplete('lesson-html-4')">Mark as Complete</button>
+  <p class="completed">Completed this lesson</p>
+
+  <script>
+    function markLessonComplete(lessonId) {
+      localStorage.setItem(lessonId, "completed");
+      alert("Lesson marked as complete!");
+    }
+  </script>
+
+</body>
+</html>

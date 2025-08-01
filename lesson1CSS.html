@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lesson 1: Introduction to CSS</title>
+  <style>
+    body {
+      background-color: #0f4c38;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: rgb(185, 216, 185);
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #3a1e00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #522b00;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="css-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Learn CSS
+    </h1>
+  
+  <p>CSS is the language we use to style an HTML document.
+    
+    CSS describes how HTML elements should be displayed.
+    
+    This tutorial will teach you CSS from basic to advanced</p>
+  <h3>CSS is the language we use to style a Web page.</h3>
+
+   <h4>What is CSS?</h4>
+    <h4> CSS stands for Cascading Style Sheets</h4>
+   <h5></h5> CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+    CSS saves a lot of work. It can control the layout of multiple web pages all at once
+    External stylesheets are stored in CSS files</h5>
+  <h4>A CSS rule consists of a selector and a declaration block.</h4>
+
+   <h1>CSS Syntax</h1>
+    <h2>CSS selector</h2>
+    
+    <h4> selector points to the HTML element you want to style.</h4>
+    
+    <h4>The declaration block contains one or more declarations separated by semicolons.
+    
+    Each declaration includes a CSS property name and a value, separated by a colon.
+    
+    Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</h4>
+    
+   <h1> Example</h1>
+   <h2> In this example all <p> elements will be center-aligned, with a red text color:</p></h2>
+    
+   <h4> p {
+      color: red;
+      text-align: center;
+    }
+    </h4>
+<p>CSS Solved a Big Problem
+  HTML was NEVER intended to contain tags for formatting a web page!
+  
+  HTML was created to describe the content of a web page, like:
+  
+  <h1>This is a heading</h1>
+  
+  <p>This is a paragraph.</p>
+  
+  When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+  
+  To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+  
+  CSS removed the style formatting from the HTML page!</p>
+
+  
+
+  <button onclick="completeLesson(this)">Mark Lesson as Complete</button>
+  <p class="completed"></p>Completed this lesson</p>
+
+  <script>
+    function completeLesson(btn) {
+      btn.style.display = "none";
+      btn.nextElementSibling.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

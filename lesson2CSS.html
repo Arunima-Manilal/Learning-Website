@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Lesson 1:  CSS syntax</title>
+        <style>
+    body {
+        background-color: #0b6749;
+        font-family: Arial, sans-serif;
+        color: white;
+        padding: 20px;
+      }
+
+      .back {
+        background-color: #00000099;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+  
+      .completed {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+        color: rgb(198, 215, 198);
+      }
+  
+      button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        background-color: #3a1e00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: #522b00;
+      }
+    </style>
+</head>
+<body>
+    <a href="css-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>CSS Introduction</h1>
+
+  <p><strong>CSS</strong> is the language we use to style a web page.</p>
+
+  <div class="highlight">
+    <p><strong>What is CSS?</strong></p>
+    <ul>
+      <li>CSS stands for <strong>Cascading Style Sheets</strong></li>
+      <li>CSS describes how HTML elements are displayed on screen, paper, or other media</li>
+      <li>CSS saves a lot of work by controlling the layout of multiple pages at once</li>
+      <li>External stylesheets are stored in <code>.css</code> files</li>
+    </ul>
+  </div>
+
+  <h2>CSS Example</h2>
+  <pre><code>body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}</code></pre>
+
+  <h2>Why Use CSS?</h2>
+  <p>CSS is used to define styles for your web pages, including design, layout, and variations in display for different devices and screen sizes.</p>
+
+  <h2>CSS Solved a Big Problem</h2>
+  <p>HTML was never intended to contain formatting tags! It was meant to describe the content of a page, like:</p>
+
+  <pre><code>&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+
+  <p>When tags like <code>&lt;font&gt;</code> and color attributes were added in HTML 3.2, it became a nightmare for developers to manage large websites.</p>
+
+  <p>To solve this, the W3C (World Wide Web Consortium) created CSS, which separates content from design.</p>
+
+  <h2>CSS Saves a Lot of Work!</h2>
+  <p>Style definitions are usually saved in external <code>.css</code> files. By changing just one CSS file, you can change the look of an entire website!</p>
+
+</body>
+</html>

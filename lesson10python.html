@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 11: Python Operators</title>
+  <style>
+    body {
+      background-color: #4f2a7f;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .back {
+      background-color: #00000099;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .completed {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lime;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #382656;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4d2f7d;
+    }
+    pre {
+      background-color: #00000033;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+      background-color: #00000033;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="python-lesson.html" class="back">← Back to All Lessons</a>
+
+  <h1>Lesson 11: Python Operators</h1>
+
+  <h2>Python Operators</h2>
+  <p>Operators are used to perform operations on variables and values. In the example below, we use the <code>+</code> operator to add together two values:</p>
+  
+  <h3>Example</h3>
+  <pre><code>print(10 + 5)</code></pre>
+
+  <p>Python divides the operators into the following groups:</p>
+  <ul>
+    <li>Arithmetic operators</li>
+    <li>Assignment operators</li>
+    <li>Comparison operators</li>
+    <li>Logical operators</li>
+    <li>Identity operators</li>
+    <li>Membership operators</li>
+    <li>Bitwise operators</li>
+  </ul>
+
+  <h2>Python Arithmetic Operators</h2>
+  <p>Arithmetic operators are used with numeric values to perform common mathematical operations:</p>
+
+  <table>
+    <tr><th>Operator</th><th>Name</th><th>Example</th></tr>
+    <tr><td>+</td><td>Addition</td><td>x + y</td></tr>
+    <tr><td>-</td><td>Subtraction</td><td>x - y</td></tr>
+    <tr><td>*</td><td>Multiplication</td><td>x * y</td></tr>
+    <tr><td>/</td><td>Division</td><td>x / y</td></tr>
+    <tr><td>%</td><td>Modulus</td><td>x % y</td></tr>
+    <tr><td>**</td><td>Exponentiation</td><td>x ** y</td></tr>
+    <tr><td>//</td><td>Floor division</td><td>x // y</td></tr>
+  </table>
+
+  <h2>Python Assignment Operators</h2>
+  <p>Assignment operators are used to assign values to variables:</p>
+
+  <table>
+    <tr><th>Operator</th><th>Example</th><th>Same As</th></tr>
+    <tr><td>=</td><td>x = 5</td><td>x = 5</td></tr>
+    <tr><td>+=</td><td>x += 3</td><td>x = x + 3</td></tr>
+    <tr><td>-=</td><td>x -= 3</td><td>x = x - 3</td></tr>
+    <tr><td>*=</td><td>x *= 3</td><td>x = x * 3</td></tr>
+    <tr><td>/=</td><td>x /= 3</td><td>x = x / 3</td></tr>
+    <tr><td>%=</td><td>x %= 3</td><td>x = x % 3</td></tr>
+    <tr><td>//=</td><td>x //= 3</td><td>x = x // 3</td></tr>
+    <tr><td>**=</td><td>x **= 3</td><td>x = x ** 3</td></tr>
+    <tr><td>&=</td><td>x &= 3</td><td>x = x & 3</td></tr>
+    <tr><td>|=</td><td>x |= 3</td><td>x = x | 3</td></tr>
+    <tr><td>^=</td><td>x ^= 3</td><td>x = x ^ 3</td></tr>
+    <tr><td>>=</td><td>x >>= 3</td><td>x = x >> 3</td></tr>
+    <tr><td<<=</td><td>x <<= 3</td><td>x = x << 3</td></tr>
+    <tr><td>:=</td><td>print(x := 3)</td><td>x = 3<br>print(x)</td></tr>
+  </table>
+
+  <h2>Python Comparison Operators</h2>
+  <p>Comparison operators are used to compare two values:</p>
+
+  <table>
+    <tr><th>Operator</th><th>Name</th><th>Example</th></tr>
+    <tr><td>==</td><td>Equal</td><td>x == y</td></tr>
+    <tr><td>!=</td><td>Not equal</td><td>x != y</td></tr>
+    <tr><td>></td><td>Greater than</td><td>x > y</td></tr>
+    <tr><td><</td><td>Less than</td><td>x < y</td></tr>
+    <tr><td>>=</td><td>Greater than or equal to</td><td>x >= y</td></tr>
+    <tr><td><=</td><td>Less than or equal to</td><td>x <= y</td></tr>
+  </table>
+
+  <h2>Python Logical Operators</h2>
+  <p>Logical operators are used to combine conditional statements:</p>
+
+  <table>
+    <tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+    <tr><td>and</td><td>Returns True if both statements are true</td><td>x < 5 and x < 10</td></tr>
+    <tr><td>or</td><td>Returns True if one of the statements is true</td><td>x < 5 or x < 4</td></tr>
+    <tr><td>not</td><td>Reverses the result, returns False if the result is true</td><td>not(x < 5 and x < 10)</td></tr>
+  </table>
+
+  <h2>Python Identity Operators</h2>
+  <p>Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:</p>
+
+  <table>
+    <tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+    <tr><td>is</td><td>Returns True if both variables are the same object</td><td>x is y</td></tr>
+    <tr><td>is not</td><td>Returns True if both variables are not the same object</td><td>x is not y</td></tr>
+  </table>
+
+  <h2>Python Membership Operators</h2>
+  <p>Membership operators are used to test if a sequence is presented in an object:</p>
+
+  <table>
+    <tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+    <tr><td>in</td><td>Returns True if a sequence with the specified value is present in the object</td><td>x in y</td></tr>
+    <tr><td>not in</td><td>Returns True if a sequence with the specified value is not present in the object</td><td>x not in y</td></tr>
+  </table>
+
+  <h2>Python Bitwise Operators</h2>
+  <p>Bitwise operators are used to compare (binary) numbers:</p>
+
+  <table>
+    <tr><th>Operator</th><th>Name</th><th>Description</th><th>Example</th></tr>
+    <tr><td>&</td><td>AND</td><td>Sets each bit to 1 if both bits are 1</td><td>x & y</td></tr>
+    <tr><td>|</td><td>OR</td><td>Sets each bit to 1 if one of two bits is 1</td><td>x | y</td></tr>
+    <tr><td>^</td><td>XOR</td><td>Sets each bit to 1 if only one of two bits is 1</td><td>x ^ y</td></tr>
+    <tr><td>~</td><td>
