@@ -16,6 +16,9 @@ This is a simple and user-friendly Learning website developed  using HTML, CSS, 
 
 # How to Run
 Just open index.html in your browser or open with ive server .
+## 🔗 Live Demo
+[Click here to view the website](https://arunima-manilal.github.io/Learning-Website/)
+
 
 ## 📌 Status
 ✅ Completed – Ready for demo and hosting
